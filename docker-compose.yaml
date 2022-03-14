@@ -18,6 +18,8 @@ services:
       - goal-log:/app/logs
       - /app/node_modules
       - ./backend/:/app
+    env_file:
+      - cred.env
   frontend:
     container_name: goal-frontend
     build: ./frontend
